@@ -1,0 +1,80 @@
+//V = a3 S = 6 a2
+// Место для первой задачи
+function calculateVolumeAndArea(number) {
+    if (isNaN(number) || number <= 0 || !Number.isInteger(number)) {
+        return "При вычислении произошла ошибка";
+    }
+    let v = Math.pow(number, 3);
+    let s = 6 * (Math.pow(number, 2));
+    return `Объем куба: ${v}, площадь всей поверхности: ${s}`;
+}
+
+// Место для второй задачи
+function getCoupeNumber(seatNumber) {
+    if (typeof(seatNumber) !== 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {
+        return "Ошибка. Проверьте правильность введенного номера места";
+    }
+
+    if (seatNumber === 0 || seatNumber > 36) {
+        return "Таких мест в вагоне не существует";
+    }
+
+    for (let i = 4; i <= 36; i = i + 4) {
+        if (seatNumber <= i) {
+            return Math.ceil(i / 4);
+        }
+    }
+}
+
+// Место для первой задачи
+function getTimeFromMinutes(number) {
+    if (!Number.isInteger(number) || number < 0)
+        return 'Ошибка, проверьте данные';
+
+    let hours = Math.floor(number / 60);
+    let minutes = number % 60;
+
+    let hoursStr = getTimeStr(getLastDigit(hours), false);
+    let minutesStr = getTimeStr(getLastDigit(minutes), true);
+
+    return `Это ${hours} ${hoursStr} и ${minutes} ${minutesStr}`;
+}
+
+function getTimeStr(number, isMinutes) {
+    let result = isMinutes ? 'минут' : 'час';
+
+    switch (number) {
+        case 1:
+            if (isMinutes) {
+                result = result.concat('a');
+            }
+            break;
+        case 2:
+        case 3:
+        case 4:
+            if (isMinutes) {
+                result = result.concat('ы');
+            }
+            result = result.concat('а');
+            break;
+        default:
+            if (!isMinutes) {
+                result = result.concat('ов');
+            }
+    }
+    return result;
+}
+
+const getLastDigit = dgt => +(dgt + '').slice(-1);
+
+// Место для второй задачи
+function findMaxNumber(a, b, c, d) {
+    return Math.max(a, b, c, d);
+}
+
+function fib(number) {
+    //TODO: Parameter check
+    // if () {
+
+    // }
+}
