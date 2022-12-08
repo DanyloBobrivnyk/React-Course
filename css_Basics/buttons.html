@@ -1,0 +1,70 @@
+<style>
+    button {
+        border: none;
+        background-color: green;
+        color: white;
+        font-weight: bold;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        margin-left: 8px;
+        margin-right: 8px;
+        cursor: pointer;
+        margin-bottom: 16px;
+        vertical-align: top;
+    }
+    
+    .stretch-button {
+        transition: padding-left 0.25s, padding-right 0.25s, padding-top 0.25s, padding-bottom 0.25s;
+    }
+    
+    .stretch-button:hover {
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    
+    .option-button {
+        transition: padding-left 0.15s, padding-right 0.15s, margin-left 0.15s, margin-right 0.15s;
+    }
+    
+    .option-button:hover {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+    
+    .shadow-button {
+        box-shadow: 4px 2px 4px gray;
+        vertical-align: auto;
+    }
+    
+    .shadow-button:active {
+        margin-top: 2px;
+        padding-top: 6px;
+        margin-left: 10px;
+        padding-left: 18px;
+        box-shadow: none;
+    }
+</style>
+
+<button class="option-button">
+    One
+</button>
+<button class="option-button">
+    Two
+</button>
+<button class="option-button">
+    Three
+</button>
+<br>
+<button class="stretch-button">
+    Stretch
+</button>
+<button class="shadow-button">
+    Shadow
+</button>
+<br> text
